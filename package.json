@@ -1,0 +1,14 @@
+{
+  "name": "stratosyn-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "test:backend": "cd backend && .\\.venv\\Scripts\\python.exe -m pytest -q",
+    "verify": "npm run build && npm run test:backend"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

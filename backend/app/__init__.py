@@ -1,0 +1,1 @@
+"""Stratosyn MVP backend package."""

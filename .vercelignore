@@ -1,0 +1,10 @@
+.git
+.venv
+**/.venv
+**/__pycache__
+**/.pytest_cache
+**/*.db
+**/*.log
+**/node_modules
+backend/tests/test_stratosyn.db
+frontend/dist
