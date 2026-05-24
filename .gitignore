@@ -9,3 +9,5 @@ dist/
 .env
 .env.local
 backend/tests/test_stratosyn.db
+
+.vercel
