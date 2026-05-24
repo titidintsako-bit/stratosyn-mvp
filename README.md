@@ -28,7 +28,7 @@ The full local system remains FastAPI + WebSocket + SQLite/PostgreSQL. Set `VITE
 ### Backend
 
 ```powershell
-cd C:\Users\user\stratosyn-mvp\backend
+cd path\to\stratosyn-mvp\backend
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -40,7 +40,7 @@ Backend URL: `http://localhost:8000`
 ### Frontend
 
 ```powershell
-cd C:\Users\user\stratosyn-mvp\frontend
+cd path\to\stratosyn-mvp\frontend
 npm install
 npm run dev
 ```
@@ -50,14 +50,14 @@ Frontend URL: `http://localhost:5173`
 ### Docker Compose
 
 ```powershell
-cd C:\Users\user\stratosyn-mvp
+cd path\to\stratosyn-mvp
 docker compose up --build
 ```
 
 ### Docker Compose With PostgreSQL
 
 ```powershell
-cd C:\Users\user\stratosyn-mvp
+cd path\to\stratosyn-mvp
 $env:STRATOSYN_POSTGRES_PASSWORD="choose-a-local-password"
 docker compose -f docker-compose.yml -f docker-compose.postgres.yml up --build
 ```
@@ -65,7 +65,7 @@ docker compose -f docker-compose.yml -f docker-compose.postgres.yml up --build
 Run migrations against the active database URL:
 
 ```powershell
-cd C:\Users\user\stratosyn-mvp\backend
+cd path\to\stratosyn-mvp\backend
 $env:STRATOSYN_DATABASE_URL="postgresql+psycopg://stratosyn:choose-a-local-password@localhost:5432/stratosyn"
 .\.venv\Scripts\python -m alembic upgrade head
 ```
@@ -236,7 +236,7 @@ What is not real yet:
 This repo is configured so Vercel builds the frontend from `frontend/` and serves `frontend/dist`.
 
 ```powershell
-cd C:\Users\user\stratosyn-mvp
+cd path\to\stratosyn-mvp
 vercel deploy . -y
 ```
 
@@ -250,7 +250,7 @@ VITE_WS_URL=wss://your-backend.example.com/ws/telemetry
 ## Tests
 
 ```powershell
-cd C:\Users\user\stratosyn-mvp\backend
+cd path\to\stratosyn-mvp\backend
 pytest -q
 ```
 

@@ -4,7 +4,7 @@ services:
     environment:
       POSTGRES_DB: stratosyn
       POSTGRES_USER: stratosyn
-      POSTGRES_PASSWORD: ${STRATOSYN_POSTGRES_PASSWORD:-stratosyn_dev}
+      POSTGRES_PASSWORD: ${STRATOSYN_POSTGRES_PASSWORD:?Set STRATOSYN_POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
     volumes:
@@ -17,7 +17,7 @@ services:
 
   backend:
     environment:
-      STRATOSYN_DATABASE_URL: postgresql+psycopg://stratosyn:${STRATOSYN_POSTGRES_PASSWORD:-stratosyn_dev}@postgres:5432/stratosyn
+      STRATOSYN_DATABASE_URL: postgresql+psycopg://stratosyn:${STRATOSYN_POSTGRES_PASSWORD:?Set STRATOSYN_POSTGRES_PASSWORD}@postgres:5432/stratosyn
     depends_on:
       postgres:
         condition: service_healthy
